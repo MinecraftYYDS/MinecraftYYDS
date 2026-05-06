@@ -1,13 +1,16 @@
 name: generate-snake-game-from-github-contribution-grid
 
-on:
+于:
   schedule:
     - cron: "0 */24 * * *"
   workflow_dispatch:
   push:
-    branches:
+    分支:
       - main
-
+      
+permissions:
+  contents: write
+  
 jobs:
   generate:
     runs-on: ubuntu-latest
